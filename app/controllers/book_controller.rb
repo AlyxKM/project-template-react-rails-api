@@ -1,19 +1,19 @@
 class BookController < ApplicationController
 
-    get '/books' do
-        books = Book.all 
-        books.to_json
-    end 
-
-    get '/books/:id' do
-        books = Book.find(params[:id])
-        books.to_json
+    def index
+        books = Book.all
+        render json: books
     end
 
-    post '/books' do
-        book = Book.create(title: params[:title], genre: params[:genre], author_name: params[:author_name])
-        book.to_json
+    def show
+        book = Book.find_by(id: params[:id])
+        if book
+        render json: book
+        else
+        render json: {error: "Book not found"}, status: :not_found
+        end
     end
+
 
 
 end

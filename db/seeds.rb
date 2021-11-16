@@ -1,3 +1,9 @@
+Book.destroy_all
+User.destroy_all
+Bookshelf.destory_all
+
+
+
 Book.create(title: "Hitchiker's Guide to the Galaxy", genre: "Science Fiction", author_name: "Douglas Adams")
 Book.create(title: "The Restaurant at the End of the Universe", genre: "Science Fiction", author_name: "Douglas Adams")
 Book.create(title: "Life, the Universe, and Everything", genre: "Science Fiction", author_name: "Douglas Adams")

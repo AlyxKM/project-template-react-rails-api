@@ -1,13 +1,32 @@
 class UserController < ApplicationController
 
-    get '/users' do
-        users = User.all 
-        users.to_json
-    end 
+    def index
+        users = User.all
+        render json: users
+    end
 
-    get '/users/:id' do
-        users = User.find(params[:id])
-        users.to_json
+    def show
+        user = User.find_by(id: params[:id])
+        if user
+        render json: user
+        else
+        render json: {error: "User not found"}, status: :not_found
+        end
+    end
+
+    def create
+        user = User.create(user_params)
+        if user.valid?
+            render json: user
+        else
+            render json: user.errors.full_messages, status: :unprocessable_entity
+        end
+    end
+
+    private
+
+    def user_params
+        params.permit(:name)
     end
 
 
