@@ -4,8 +4,8 @@ import Search from './Search'
 
 function NavBar() {
     return (
-        <div>
-            <h1>NavBar</h1>
+        <div class="NavBar">
+            <h4>BookShelf</h4>
             <FilterBy />
             <Search />
         </div>
