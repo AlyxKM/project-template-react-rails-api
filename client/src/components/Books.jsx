@@ -1,9 +1,12 @@
 import React from 'react'
 
-function Books() {
+function Books({title, genre, author}) {
     return (
-        <div>
-            <h1>Book Cards</h1>
+        <div className="BookCards">
+            <img src="https://images3.penguinrandomhouse.com/cover/9780739360385" />
+            <p>Title: book title</p>
+            <p>Genre: book genre</p>
+            <p>Author: book author</p>
         </div>
     )
 }

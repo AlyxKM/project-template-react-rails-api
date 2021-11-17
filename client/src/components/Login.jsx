@@ -14,7 +14,8 @@ function Login() {
                 type='text'
                 name='password'
                 placeholder='Input Password'/>
-            <input type='submit'/>
+            <button type='submit' class="btn btn-primary">Sign In</button>
+            <button class="btn btn-primary">Sign Up</button>
     </form>
         </div>
     )
