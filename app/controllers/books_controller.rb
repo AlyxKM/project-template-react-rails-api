@@ -1,4 +1,4 @@
-class BookController < ApplicationController
+class BooksController < ApplicationController
 
     def index
         books = Book.all
@@ -13,6 +13,7 @@ class BookController < ApplicationController
         render json: {error: "Book not found"}, status: :not_found
         end
     end
+
 
 
 

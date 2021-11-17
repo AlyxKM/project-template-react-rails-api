@@ -1,4 +1,4 @@
-class BookshelfController < ApplicationController
+class BookshelvesController < ApplicationController
 
     def index
         bookshelves = BookShelf.all
