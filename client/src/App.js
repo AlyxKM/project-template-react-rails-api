@@ -10,7 +10,7 @@ function App() {
   const [bookList, setBookList] = useState([])
   const [bookShelf, setBookShelf] = useState([])
 
-  /*useEffect(()=>{
+  useEffect(()=>{
     fetch("http://localhost:3000/books")
     .then(res => res.json())
     .then(data => setBookList(data))
@@ -19,7 +19,7 @@ function App() {
     .then(res => res.json())
     .then(data => setBookShelf(data))
     
-  }, []) */
+  }, []) 
 
   return (
     <div>

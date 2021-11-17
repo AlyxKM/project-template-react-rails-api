@@ -1,16 +1,16 @@
 import React from 'react'
 
-function Books({title, genre, author}) {
+function Books({title, genre, author, image}) {
     return (
         <>
         <div className="BookImg">
-            <img src="https://images3.penguinrandomhouse.com/cover/9780739360385" />
+            <img src={image} />
         </div>
 
         <div className="BookCards">
-            <p>Title: book title</p>
-            <p>Genre: book genre</p>
-            <p>Author: book author</p>
+            <p>Title: {title}</p>
+            <p>Genre: {genre}</p>
+            <p>Author: {author}</p>
         </div>
         </>
     )
