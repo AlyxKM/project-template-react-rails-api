@@ -12,6 +12,7 @@ function MainDisplay({bookList, bookShelf}) {
     return (
         <div >
             <Books />
+            <hr />
             <BookShelf />
         </div>
     )

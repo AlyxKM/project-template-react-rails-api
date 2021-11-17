@@ -35,11 +35,15 @@
   margin-bottom: 10px;
 }
 
+.BookImg img{
+  padding: 20px;
+  width: 30%;
+}
+
 .BookCards {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: space-evenly;
   padding: 20px;
   width: 30%;
-  
 }
