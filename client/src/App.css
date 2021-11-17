@@ -37,13 +37,17 @@
 
 .BookImg img{
   padding: 20px;
-  width: 30%;
+  width: 50%;
 }
 
 .BookCards {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   padding: 20px;
   width: 30%;
+}
+
+.MainContent {
+  display: flex;
+  flex-direction: row;
 }

@@ -10,9 +10,8 @@ function MainDisplay({bookList, bookShelf}) {
     const userBookShelf = bookShelf.map(books => <BookShelf key={books.id} title={books.title} genre={books.genre} author={books.author}/>) */
 
     return (
-        <div >
+        <div className="MainContent">
             <Books />
-            <hr />
             <BookShelf />
         </div>
     )
