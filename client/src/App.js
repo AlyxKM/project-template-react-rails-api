@@ -21,10 +21,17 @@ function App() {
     
   }, []) 
 
+  function handleFilterByGenre(id) {
+    const filteredBooks = bookList.filter((book)=> book.genre.includes(id))
+  
+    setBookList(filteredBooks)
+  }
+
+
   return (
     <div>
       <Header />
-      <NavBar />
+      <NavBar handleFilterByGenre={handleFilterByGenre}/>
       <hr/>
       <MainDisplay bookList={bookList} bookShelf={bookShelf}/>
     </div>

@@ -2,11 +2,11 @@ import React from 'react'
 import FilterBy from './FilterBy'
 import Search from './Search'
 
-function NavBar({setSearchKeyWord}) {
+function NavBar({setSearchKeyWord, handleFilterByGenre}) {
     return (
         <div class="NavBar">
             <h4>BookShelf</h4>
-            <FilterBy />
+            <FilterBy handleFilterByGenre={handleFilterByGenre}/>
             <Search setSearchKeyWord={setSearchKeyWord}/>
         </div>
     )
