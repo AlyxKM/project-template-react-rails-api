@@ -3,7 +3,7 @@ import LoggedIn from './LoggedIn'
 import Login from './Login'
 import {useEffect, useState} from 'react'
 
-function Header({setCurrentUser, currentUser}) {
+function Header({setCurrentUser, currentUser, setBookList, fullBookList}) {
 
     const [loggedIn, setLoggedIn] = useState(false)
 
@@ -20,7 +20,7 @@ function Header({setCurrentUser, currentUser}) {
     return (
         <div class="Header">
             {!loggedIn ? <Login setLoggedIn={setLoggedIn} setCurrentUser={setCurrentUser}/> : <LoggedIn currentUser={currentUser}/>}
-            <h3>Recommended Books</h3>
+            <h3 onClick={(e) => setBookList(fullBookList)}>Recommended Books</h3>
         </div>
     )
 }

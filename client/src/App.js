@@ -25,16 +25,9 @@ function App() {
     
   }, []) 
 
-  function handleFilterByGenre(id) {
-    const filteredBooks = bookList.filter((book)=> book.genre.includes(id))
-  
-    setBookList(filteredBooks)
-  }
-
-
   return (
     <div>
-        <Header setCurrentUser={setCurrentUser} currentUser={currentUser}/>
+        <Header setCurrentUser={setCurrentUser} currentUser={currentUser} setBookList={setBookList} fullBookList={fullBookList}/>
         <NavBar setBookList={setBookList} fullBookList={fullBookList}/>
       <hr/>
       <MainDisplay bookList={bookList} bookShelf={bookShelf}/>
