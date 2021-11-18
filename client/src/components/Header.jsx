@@ -11,7 +11,7 @@ function Header() {
     return (
         <div class="Header">
             <Login /> : <LoggedIn />
-            <h3>Recommended Books</h3>
+            <h3 >Recommended Books</h3>
         </div>
     )
 }

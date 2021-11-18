@@ -1,8 +1,11 @@
 import React from 'react'
 
 function Search({setSearchKeyWord}) {
+
+
     return (
         <div >
+          <form>
           <input
             class="form-control"
             type="text"
@@ -10,6 +13,7 @@ function Search({setSearchKeyWord}) {
             placeholder="Search Books"
             onChange={(e) => setSearchKeyWord(e.target.value)}
           />
+          </form>
         </div>
     )
 }

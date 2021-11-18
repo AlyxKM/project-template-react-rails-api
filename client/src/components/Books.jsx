@@ -2,7 +2,7 @@ import React from 'react'
 
 function Books({title, genre, author, image}) {
 
-    console.log(image)
+
 
     return (
         <div class="card mb-3">
