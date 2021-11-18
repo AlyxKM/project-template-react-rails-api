@@ -8,7 +8,7 @@ function FilterBy(handleFilterByGenre) {
 
             
             <div>
-            <select className="Dropdown" name="Filter by Genre">
+            <DropdownMenu className="Dropdown" name="Filter by Genre">
                 <option selected value="Filter by Genre">Filter by Genre</option>
                 <option onClick= {(e) => handleFilterByGenre(e.target.id)} value="Science Fiction" id={"Science Fiction"}>Science Fiction</option>
                 <option onClick= {(e) => handleFilterByGenre(e.target.id)} value="Young Adult" id={"YA"}>Young Adult</option>
@@ -16,7 +16,7 @@ function FilterBy(handleFilterByGenre) {
                 <option onClick= {(e) => handleFilterByGenre(e.target.id)} value="LGBT" id={"LGBT"}>LGBT</option>
                 <option onClick= {(e) => handleFilterByGenre(e.target.id)} value="Historical" id={"Historical"}>Historical Fiction</option>
                 <option onClick= {(e) => handleFilterByGenre(e.target.id)} value="Horror" id={"Horror"}>Horror</option>
-            </select>
+            </DropdownMenu>
             </div>
 
         </div>
