@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BookShelf() {
+function BookShelf({title, genre, author, image}) {
     return (
         <div>
             
