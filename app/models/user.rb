@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :bookShelves
+    has_many :bookShelves, dependent: :destroy
     has_many :books, through: :bookShelves
     has_secure_password
     validates :user_name, :password, presence: true
