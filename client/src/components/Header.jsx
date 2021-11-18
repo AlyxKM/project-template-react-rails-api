@@ -1,17 +1,26 @@
 import React from 'react'
 import LoggedIn from './LoggedIn'
 import Login from './Login'
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
-function Header() {
+function Header({setCurrentUser, currentUser}) {
 
+    const [loggedIn, setLoggedIn] = useState(false)
 
-
+    useEffect(() => {
+       fetch('/me')
+       .then(res => res.json())
+       .then(user => {
+           setCurrentUser(user)
+           setLoggedIn(true)
+       }) 
+     
+    }, [])
 
     return (
         <div class="Header">
-            <Login /> : <LoggedIn />
-            <h3 >Recommended Books</h3>
+            {!loggedIn ? <Login setLoggedIn={setLoggedIn} setCurrentUser={setCurrentUser}/> : <LoggedIn currentUser={currentUser}/>}
+            <h3>Recommended Books</h3>
         </div>
     )
 }

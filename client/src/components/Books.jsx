@@ -3,7 +3,6 @@ import React from 'react'
 function Books({title, genre, author, image}) {
 
 
-
     return (
         <div class="card mb-3">
             <div class="row g-0">
