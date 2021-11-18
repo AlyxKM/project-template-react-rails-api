@@ -1,6 +1,7 @@
 import React from 'react'
 import Books from './Books'
 import BookShelf from './BookShelf'
+import FilteredBooks from './FilteredBooks'
 
 function MainDisplay({bookList, bookShelf}) {
 
@@ -14,6 +15,7 @@ function MainDisplay({bookList, bookShelf}) {
         <div>
             {bookDetails}
             {userBookShelf}
+            <FilteredBooks />
         </div>
     )
 }
