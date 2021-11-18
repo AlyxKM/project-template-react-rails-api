@@ -8,12 +8,15 @@ import {useEffect, useState} from 'react'
 function App() {
 
   const [bookList, setBookList] = useState([])
+  const [fullBookList, setFullBookList] = useState([])
   const [bookShelf, setBookShelf] = useState([])
 
   useEffect(()=>{
     fetch("http://localhost:3000/books")
     .then(res => res.json())
-    .then(data => setBookList(data))
+    .then(data => 
+      {setBookList(data)
+      setFullBookList(data)})
 
     fetch("http://localhost:3000/bookshelves")
     .then(res => res.json())
@@ -21,17 +24,11 @@ function App() {
     
   }, []) 
 
-  function handleFilterByGenre(id) {
-    const filteredBooks = bookList.filter((book)=> book.genre.includes(id))
-  
-    setBookList(filteredBooks)
-  }
-
 
   return (
     <div>
       <Header />
-      <NavBar handleFilterByGenre={handleFilterByGenre}/>
+      <NavBar setBookList={setBookList} fullBookList={fullBookList}/>
       <hr/>
       <MainDisplay bookList={bookList} bookShelf={bookShelf}/>
     </div>
