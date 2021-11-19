@@ -33,17 +33,6 @@ class BookshelvesController < ApplicationController
         end
     end
 
-    def userBookshlf
-       
-        userBookShlf = current_user.books
-        byebug
-        if userBookShlf
-            render json: userBookshlf
-        else
-            render json: {error: "Bookshelf not found"}, status: :not_found
-        end
-    end
-
     private
 
     def bookShelf_params

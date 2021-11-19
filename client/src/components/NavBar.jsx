@@ -10,9 +10,14 @@ function NavBar({setBookList, setMyShelf, myShelf, fullBookList, setBookShelf,bo
 
     return (
         <div class="NavBar">
+<<<<<<< HEAD
             <BookShelf setBookList={setBookList} bookShelf={bookShelf} currentUser={currentUser} fullBookList={fullBookList} setBookShelf={setBookShelf} />
             <h4 onClick={() => setMyShelf(!myShelf)}>My Bookshelf</h4>
             {myShelf? console.log(bookShelf, currentUser) : console.log("fullBookList")}
+=======
+            {/* <BookShelf setBookList={setBookList} bookShelf={bookShelf} currentUser={currentUser} fullBookList={fullBookList} setBookShelf={setBookShelf} /> */}
+            <button onClick={() => !setMyShelf(false)}>My Bookshelf</button>
+>>>>>>> c8d330aab725d141d4d6c6eb905638e033b59b45
             <FilterBy setBookList={setBookList} fullBookList={fullBookList}/>
             <Search setBookList={setBookList} fullBookList={fullBookList}/>
         </div>
