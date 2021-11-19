@@ -4,7 +4,7 @@ function Search({setBookList, fullBookList}) {
 
   function setSearchKeyWord(title, e) {
     console.log(title)
-    const searchedBook = fullBookList.filter((book)=> book.title.includes(title))
+    const searchedBook = fullBookList.filter((book)=> book.title.toLowerCase().includes(title.toLowerCase()))
     setBookList(searchedBook)
   }
 

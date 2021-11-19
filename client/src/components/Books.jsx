@@ -2,7 +2,6 @@ import React from 'react'
 
 function Books({title, genre, author, image}) {
 
-    
 
     return (
         <div class="card mb-3">
@@ -12,7 +11,7 @@ function Books({title, genre, author, image}) {
                  </div>
                  <div class="col-md-9">
                     <div class="card-body">
-                     <h5 class="card-title">Title: {title}</h5>
+                     <h5 class="card-title">{title}</h5>
                      <p class="card-text">Genre: {genre}</p>
                      <p class="card-text">Author: {author}</p>
                     </div>
