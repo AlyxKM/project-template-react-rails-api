@@ -54,3 +54,13 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.SignUp {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin:15%;
+  background-color: rgb(211, 224, 233);
+  border-radius: 10px;
+}

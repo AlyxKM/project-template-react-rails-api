@@ -47,11 +47,11 @@ function Login({setLoggedIn, setCurrentUser}) {
                 placeholder='Input Password'
                 onChange={formFill}/>
             <button type='submit' class="btn btn-primary">Sign In</button>
-            <Link exact to="/SignUP">
+           
+    </form>
+             <Link exact to="/SignUP">
             <button class="btn btn-primary">Sign Up</button>
             </Link>
-    </form>
-            
         </div>
     )
 }
