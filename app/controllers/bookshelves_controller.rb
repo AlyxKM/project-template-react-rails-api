@@ -2,7 +2,7 @@ class BookshelvesController < ApplicationController
 
     def index
         # bookshelves = BookShelf.all
-          my_bookshelf = User.first.bookshelves
+          my_bookshelf = current_user.bookShelves
         render json: my_bookshelf
     end
 

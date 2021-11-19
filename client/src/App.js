@@ -51,7 +51,6 @@ function App() {
         <Route exact path="/">
         <Header setCurrentUser={setCurrentUser} currentUser={currentUser} setBookList={setBookList} fullBookList={fullBookList}/>
         <NavBar setMyShelf={setMyShelf} myShelf={myShelf} setBookList={setBookList} fullBookList={fullBookList} bookShelf={bookShelf} currentUser={currentUser} setBookShelf={setBookShelf}/>
-        {myShelf? console.log(bookShelf) : console.log("fullBookList")}
       <hr/>
         <MainDisplay bookList={bookList} bookShelf={bookShelf} currentUser={currentUser}/>
         </Route>
