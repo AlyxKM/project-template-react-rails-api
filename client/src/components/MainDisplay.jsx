@@ -2,6 +2,8 @@ import React from 'react'
 import Books from './Books'
 import BookShelf from './BookShelf'
 import FilteredBooks from './FilteredBooks'
+import {Route, Switch} from 'react-router-dom'
+import SignUp from './SignUp';
 
 function MainDisplay({bookList, bookShelf}) {
 
@@ -13,9 +15,16 @@ function MainDisplay({bookList, bookShelf}) {
 
     return (
         <div>
+         <Switch>
+           <Route exact path="/SignUp">
+            <SignUp />
+           </Route>
+           <Route exact path="/">
             {bookDetails}
+            </Route>
             {userBookShelf}
             <FilteredBooks />
+         </Switch>
         </div>
     )
 }

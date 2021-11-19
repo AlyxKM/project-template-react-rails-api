@@ -1,13 +1,18 @@
 import React from 'react'
 
-function LoggedIn({currentUser}) {
+function LoggedIn({currentUser, setLoggedIn}) {
+
+    function logOut(){
+        fetch("/logout", {method: 'DELETE'})
+        setLoggedIn(false)
+    }
+
     return (
         <div>
-            <h1>LOGGED IN</h1>
+            <h3>Welcome! {currentUser.user_name}!</h3>
+            <button class="btn btn-secondary" onClick={logOut}>Log Out</button>
         </div>
     )
 }
 
 export default LoggedIn
-{/* <h3>Welcome,{currentUser.name}</h3>
-            <button>LogOut</button> */}

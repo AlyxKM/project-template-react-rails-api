@@ -19,7 +19,7 @@ function Header({setCurrentUser, currentUser}) {
 
     return (
         <div class="Header">
-            {!loggedIn ? <Login setLoggedIn={setLoggedIn} setCurrentUser={setCurrentUser}/> : <LoggedIn currentUser={currentUser}/>}
+            {!loggedIn ? <Login setLoggedIn={setLoggedIn} setCurrentUser={setCurrentUser}/> : <LoggedIn currentUser={currentUser} setLoggedIn={setLoggedIn}/>}
             <h3>Recommended Books</h3>
         </div>
     )

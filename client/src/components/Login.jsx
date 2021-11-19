@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 function Login({setLoggedIn, setCurrentUser}) {
 
@@ -30,8 +31,6 @@ function Login({setLoggedIn, setCurrentUser}) {
           }
         )}
 
-        console.log(input)
-
     return (
         <div>
           <form className="Form" onSubmit={handleSubmit}>
@@ -48,8 +47,11 @@ function Login({setLoggedIn, setCurrentUser}) {
                 placeholder='Input Password'
                 onChange={formFill}/>
             <button type='submit' class="btn btn-primary">Sign In</button>
-    </form>
+            <Link exact to="/SignUP">
             <button class="btn btn-primary">Sign Up</button>
+            </Link>
+    </form>
+            
         </div>
     )
 }

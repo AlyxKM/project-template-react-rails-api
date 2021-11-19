@@ -5,6 +5,7 @@ import Header from './components/Header';
 import NavBar from './components/NavBar';
 import {useEffect, useState} from 'react'
 
+
 function App() {
 
   const [bookList, setBookList] = useState([])
@@ -32,12 +33,13 @@ function App() {
   }
 
 
+
   return (
     <div>
         <Header setCurrentUser={setCurrentUser} currentUser={currentUser}/>
         <NavBar setBookList={setBookList} fullBookList={fullBookList}/>
       <hr/>
-      <MainDisplay bookList={bookList} bookShelf={bookShelf}/>
+        <MainDisplay bookList={bookList} bookShelf={bookShelf}/>
     </div>
   );
 }
