@@ -14,7 +14,8 @@ function App() {
   const [bookShelf, setBookShelf] = useState([])
   const [fullBookList, setFullBookList] = useState([])
   const [currentUser, setCurrentUser] = useState({})
-  
+  const [myShelf, setMyShelf] = useState(false)
+  //const [user, setCurrentUser] = useState({})
 
   useEffect(()=>{
     fetch("http://localhost:3000/books")
@@ -30,6 +31,11 @@ function App() {
     
   }, []) 
 
+  function openUserBookshelf(){
+    myShelf === false ? console.log("false") : console.log("true")
+    // setBookList(fullBookList) : setBookList(bookShelf)
+}
+
   
 
   return (
@@ -40,7 +46,7 @@ function App() {
            </Route>
         <Route exact path="/">
         <Header setCurrentUser={setCurrentUser} currentUser={currentUser} setBookList={setBookList} fullBookList={fullBookList}/>
-        <NavBar setBookList={setBookList} fullBookList={fullBookList} bookShelf={bookShelf} currentUser={currentUser}/>
+        <NavBar setMyShelf={setMyShelf} openUserBookshelf={openUserBookshelf} setBookList={setBookList} fullBookList={fullBookList} bookShelf={bookShelf} currentUser={currentUser} setBookShelf={setBookShelf}/>
       <hr/>
         <MainDisplay bookList={bookList} bookShelf={bookShelf} currentUser={currentUser}/>
         </Route>

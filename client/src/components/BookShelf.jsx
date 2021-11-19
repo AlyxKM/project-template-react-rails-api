@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BookShelf({title, genre, author, image, currentUser, setBookList, bookShelf, fullBookList}) {
+function BookShelf({title, genre, author, image, currentUser, setBookList, bookShelf, fullBookList, setBookShelf}) {
 
     
     function openUserBookshelf(currentUser, bookShelf, setBookList, fullBookList) {
@@ -8,18 +8,22 @@ function BookShelf({title, genre, author, image, currentUser, setBookList, bookS
         //     //grabs user_id once they are logged in
                 //on clicking my bookshelf, will load bookshelf data, collect book ids, and use them to display book data like in main display
 
-                // const id = currentUser.id
-                // const userBookShelf = bookShelf.filter((usb)=> usb.user_id.includes(id))
-                console.log(bookShelf)
-                // const openBookShelf = fullBookList.filter((book)=> book.id.includes(userBookShelf.book_id))
-                // setBookList(openBookShelf)
-    
+                // id = currentUser.id
+                // userBookshelf = bookShelf.filter((bookshelf)=> bookshelf.user_id.includes(id))
+                // console.log(id)
+                //openBookshelf = fullBookList.filter((book)=> book.id.includes(userBookShelf))
+                //setBookList(openBookShelf)
+
+
+                // fetch("/UserBookshlf")
+                // .then(res => res.json())
+                // .then(data => setBookShelf(data))
     }
 
         
     return (
         <div>
-            <h4 onClick={(e) => openUserBookshelf(currentUser)}>My Bookshelf</h4>
+            {/* <h4 onClick={(e) => openUserBookshelf(currentUser)}>My Bookshelf</h4> */}
         </div>
     )
 }
