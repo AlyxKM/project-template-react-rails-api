@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BookShelf({title, genre, author, image, currentUser, setBookList, bookShelf, fullBookList}) {
+function BookShelf({title, genre, author, image, currentUser, setBookList, bookShelf, fullBookList, setBookShelf}) {
 
     
     function openUserBookshelf(currentUser, id, userBookshelf, bookShelf, setBookList, fullBookList) {
@@ -13,7 +13,11 @@ function BookShelf({title, genre, author, image, currentUser, setBookList, bookS
                 console.log(id)
                 //openBookshelf = fullBookList.filter((book)=> book.id.includes(userBookShelf))
                 //setBookList(openBookShelf)
-    
+
+
+                fetch("/UserBookshlf")
+                .then(res => res.json())
+                .then(data => setBookShelf(data))
     }
 
         
