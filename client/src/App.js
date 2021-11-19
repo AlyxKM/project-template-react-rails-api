@@ -35,7 +35,7 @@ function App() {
     myShelf === false ? console.log("false") : console.log("true")
     // setBookList(fullBookList) : setBookList(bookShelf)
 }
-
+console.log(myShelf)
   
 
   return (

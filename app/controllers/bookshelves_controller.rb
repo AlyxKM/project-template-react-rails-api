@@ -2,7 +2,7 @@ class BookshelvesController < ApplicationController
 
     def index
         # bookshelves = BookShelf.all
-          my_bookshelf = current_user.bookshelves
+          my_bookshelf = current_user.bookShelves
         render json: my_bookshelf
     end
 
@@ -30,17 +30,6 @@ class BookshelvesController < ApplicationController
         book.destroy
         else
         render json: {error: "Book not found"}, status: :not_found
-        end
-    end
-
-    def userBookshlf
-       
-        userBookShlf = current_user.books
-        byebug
-        if userBookShlf
-            render json: userBookshlf
-        else
-            render json: {error: "Bookshelf not found"}, status: :not_found
         end
     end
 
