@@ -39,7 +39,7 @@ function App() {
         <Header setCurrentUser={setCurrentUser} currentUser={currentUser} setBookList={setBookList} fullBookList={fullBookList}/>
         <NavBar setBookList={setBookList} fullBookList={fullBookList}/>
       <hr/>
-        <MainDisplay bookList={bookList} bookShelf={bookShelf}/>
+        <MainDisplay bookList={bookList} bookShelf={bookShelf} currentUser={currentUser}/>
         </Route>
       </Switch>
     </div>
