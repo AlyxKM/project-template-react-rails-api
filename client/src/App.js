@@ -31,11 +31,15 @@ function App() {
     
   }, []) 
 
-  function openUserBookshelf(){
-    myShelf === false ? console.log("false") : console.log("true")
-    // setBookList(fullBookList) : setBookList(bookShelf)
-}
-console.log(myShelf)
+//   function openUserBookshelf(){
+//     if(myShelf === false){
+//       console.log("hello")
+//     } else{
+//       console.log("goodbye")
+//     }
+//     // setBookList(fullBookList) : setBookList(bookShelf)
+// }
+
   
 
   return (
@@ -46,7 +50,8 @@ console.log(myShelf)
            </Route>
         <Route exact path="/">
         <Header setCurrentUser={setCurrentUser} currentUser={currentUser} setBookList={setBookList} fullBookList={fullBookList}/>
-        <NavBar setMyShelf={setMyShelf} openUserBookshelf={openUserBookshelf} setBookList={setBookList} fullBookList={fullBookList} bookShelf={bookShelf} currentUser={currentUser} setBookShelf={setBookShelf}/>
+        <NavBar setMyShelf={setMyShelf} myShelf={myShelf} setBookList={setBookList} fullBookList={fullBookList} bookShelf={bookShelf} currentUser={currentUser} setBookShelf={setBookShelf}/>
+        {myShelf? console.log(bookShelf) : console.log("fullBookList")}
       <hr/>
         <MainDisplay bookList={bookList} bookShelf={bookShelf} currentUser={currentUser}/>
         </Route>
