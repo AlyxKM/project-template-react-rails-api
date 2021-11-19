@@ -25,9 +25,12 @@ function App() {
 
     fetch("http://localhost:3000/bookshelves")
     .then(res => res.json())
-    .then(data => setBookShelf(data))
+    .then(data =>setBookShelf(data))
+    
     
   }, []) 
+
+  
 
   return (
     <div>

@@ -11,14 +11,14 @@ function MainDisplay({bookList, bookShelf, currentUser}) {
 
 
 
-    const userBookShelf = bookShelf.map(books => <BookShelf key={books.id} title={books.title} genre={books.genre} author={books.author} currentUser={currentUser}/>)
+    // const userBookShelf = bookShelf.map(books => <BookShelf key={books.id} title={books.title} genre={books.genre} author={books.author} currentUser={currentUser}/>)
 
-    console.log(bookList)
+    // console.log(bookList)
     return (
         <div>
             {bookDetails}
             
-            {userBookShelf}
+            {/* {userBookShelf} */}
         
         </div>
     )
