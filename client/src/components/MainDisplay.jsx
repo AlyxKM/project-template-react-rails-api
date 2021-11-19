@@ -2,10 +2,8 @@ import React from 'react'
 import Books from './Books'
 import BookShelf from './BookShelf'
 
-import {Route, Switch} from 'react-router-dom'
 
-
-function MainDisplay({bookList, bookShelf, currentUser}) {
+function MainDisplay({bookList, bookShelf, currentUser, myShelf}) {
 
     
 
@@ -15,12 +13,13 @@ function MainDisplay({bookList, bookShelf, currentUser}) {
 
     // const userBookShelf = bookShelf.map(books => <BookShelf key={books.id} title={books.title} genre={books.genre} author={books.author} currentUser={currentUser}/>)
 
-    // console.log(bookList)
+    console.log(bookShelf)
+
     return (
         <div>
-            {bookDetails}
+            {/* {myShelf? {bookDetails}:{userBookShelf}} */}
             
-            {/* {userBookShelf} */}
+            {bookDetails}
         
         </div>
     )
