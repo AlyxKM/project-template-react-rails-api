@@ -1,5 +1,5 @@
 import React from 'react'
-// import styled from 'styled-components'
+
 
 function FilterBy({setBookList, fullBookList}) {
 
@@ -16,7 +16,7 @@ function FilterBy({setBookList, fullBookList}) {
             
             <div>
             <select name="Dropdown" onChange={(e) => handleFilterByGenre(e.target.value)}>
-                <option value="Filter by Genre">Filter by Genre</option>
+                <option value="">Filter by Genre</option>
                 <option value="Science Fiction">Science Fiction</option>
                 <option value="YA">Young Adult</option>
                 <option value="Fantasy">Fantasy</option>
@@ -32,20 +32,4 @@ function FilterBy({setBookList, fullBookList}) {
 }
 
 export default FilterBy
-
-// const DropdownMenu = styled.div `
-//   padding: 0;
-//   margin: 0;
-//   padding-left: 1em;
-//   background: #ffffff;
-//   border: 2px solid #e5e5e5;
-//   box-sizing: border-box;
-//   color: #3faffa;
-//   font-size: 1.3rem;
-//   font-weight: 500;
-//   &:first-child {
-//     padding-top: 0.8em;
-//   }
-
-// `
 
