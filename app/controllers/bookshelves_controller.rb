@@ -35,7 +35,7 @@ class BookshelvesController < ApplicationController
     private
 
     def bookShelf_params
-        params.permit(:user_id, :book_id)
+        params.permit(:user_id, :book_id, :read)
     end
    
 

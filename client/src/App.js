@@ -37,9 +37,9 @@ function App() {
            </Route>
         <Route exact path="/">
         <Header setCurrentUser={setCurrentUser} currentUser={currentUser} setBookList={setBookList} fullBookList={fullBookList}/>
-        <NavBar setBookList={setBookList} fullBookList={fullBookList}/>
+        <NavBar setBookList={setBookList} fullBookList={fullBookList} bookShelf={bookShelf} currentUser={currentUser}/>
       <hr/>
-        <MainDisplay bookList={bookList} bookShelf={bookShelf}/>
+        <MainDisplay bookList={bookList} bookShelf={bookShelf} currentUser={currentUser}/>
         </Route>
       </Switch>
     </div>

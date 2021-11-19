@@ -1,8 +1,10 @@
 import React from 'react'
 import {useState} from 'react'
-import {Link, withRouter} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 
 function SignUp({setCurrentUser}) {
+
+    let history = useHistory();
 
     const [input , setInput] = useState({
         user_name: "",
@@ -24,8 +26,8 @@ function SignUp({setCurrentUser}) {
             })
             .then(res=>res.json())
             .then(currentUser => {
-                // some conditional logic based on response data
                 setCurrentUser(currentUser)
+                history.push('/')
               })
               
             }

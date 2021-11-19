@@ -1,7 +1,24 @@
 import React from 'react'
 
-function Books({title, genre, author, image}) {
+function Books({title, genre, author, image, bookId, currentUser}) {
 
+    function addToBookShelf(){
+
+        const book = {
+            user_id: currentUser.id,
+            book_id: bookId,
+            read: false
+        }
+
+        fetch("http://localhost:3000/bookshelves", {
+            method: "POST",
+            headers: {Accept: "application/json",
+                    "Content-Type": "application/json"},
+            body: JSON.stringify(book)
+            })
+            .then(r => r.json())
+            .then(book =>console.log(book))
+    }
 
     return (
         <div class="card mb-3">
@@ -18,7 +35,7 @@ function Books({title, genre, author, image}) {
                  </div>
             </div>
             <div  class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button class="btn btn-primary me-md-2">Add to Bookshelf</button>
+            <button onClick={addToBookShelf} class="btn btn-primary me-md-2">Add to Bookshelf</button>
             </div>
         </div>
         
@@ -26,3 +43,10 @@ function Books({title, genre, author, image}) {
 }
 
 export default Books
+
+
+// function deleteBook({bookShelf.id}){
+
+//     fetch(`http://localhost:3000/bookshelves/${bookshelf.id}`, {
+//         method: "DELETE"})
+// }
