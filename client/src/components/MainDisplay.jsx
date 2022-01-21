@@ -9,7 +9,7 @@ function MainDisplay({bookList, bookShelf, currentUser}) {
 
     
 
-    const bookDetails = bookList.map(books => <Books key={books.id} title={books.title} genre={books.genre} author={books.author_name} image={books.image} bookId={books.id} currentUser={currentUser}/>)
+    const bookDetails = bookList.map(books => <Books key={books.id} title={books.title} genre={books.genre} author={books.author_name} image={books.image} bookId={books.id} currentUser={currentUser} />)
 
 
 
