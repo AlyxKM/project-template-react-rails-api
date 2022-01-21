@@ -31,6 +31,8 @@ function App() {
     
   }, []) 
 
+  console.log(bookShelf)
+
 //   function openUserBookshelf(){
 //     if(myShelf === false){
 //       console.log("hello")
@@ -52,7 +54,7 @@ function App() {
         <Header setCurrentUser={setCurrentUser} currentUser={currentUser} setBookList={setBookList} fullBookList={fullBookList}/>
         <NavBar setMyShelf={setMyShelf} myShelf={myShelf} setBookList={setBookList} fullBookList={fullBookList} bookShelf={bookShelf} currentUser={currentUser} setBookShelf={setBookShelf}/>
       <hr/>
-        <MainDisplay bookList={bookList} bookShelf={bookShelf} currentUser={currentUser}/>
+        <MainDisplay bookList={bookList} bookShelf={bookShelf} currentUser={currentUser} myShelf={myShelf}/>
         </Route>
       </Switch>
     </div>
